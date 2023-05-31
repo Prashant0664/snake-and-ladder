@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiTwotonePlusSquare, AiFillGitlab, AiTwotoneDownCircle, AiFillHeart } from "react-icons/ai"
+import {AiOutlineGithub , AiFillLinkedin , AiTwotonePlusSquare, AiFillGitlab, AiTwotoneDownCircle, AiFillHeart } from "react-icons/ai"
 import Home from './home';
 import Winner from './Winner';
 
@@ -285,19 +285,18 @@ const Play = ({ start, slide1, a, b, c, d }) => {
             cben(false);
         }, 300);
     }
-
     return (
         <>
-            <div className={`${start ? "" : "hidden"} lg:hidden bg-slate-300 text-black absolute top-0 w-[300px] flex flex-col justify-center items-center h-[999px]`}>
-                <AiTwotonePlusSquare className={`${dcss ? "dicecss" : "dicecss2"} mt-[-400px] text-[200px] dicecss text-red-400 flex justify-center items-center text-center `} />
-                <div className={`mt-[-60%] mb-[10%] text-white z-10 text-[100px]`}>{cnm}</div>
-                <div className={`mt-[10px]`}>
-                    <div className={`text-xl font-bold `}><h1>
+            <div  style={{display:start?'':'none'}} className={` ${start ? "" : "hidden"} ${start ? "" : "hidden"} castbox lfb11 lfb112 bg-slate-300 text-black top-0 w-[300px] flex ffsmall  flex-col justify-center items-center h-[100%] lll`}>
+                <AiTwotonePlusSquare className={` ${start ? "" : "hidden"} ${dcss ? "dicecss" : "dicecss2"} mt-[0px] text-[200px] hellodice dicecss text-red-400 flex justify-center items-center text-center `} />
+                <div className={` ${start ? "" : "hidden"} mt-[-60%] mb-[10%] text-white z-10 bigd text-[100px]`}>{cnm}</div>
+                <div className={`${start ? "" : "hidden"}  mt-[60px] playeec `}>
+                    <div className={` ${start ? "" : "hidden"} text-xl font-bold `}><h1>
                         Player {ashow[pointer]} Turn
                     </h1>
                     </div>
                 </div>
-                <div className='flex gap-[10%] top-0 mt-4 justify-center'>
+                <div className={`flex gap-[10%] playeec2  top-0 mt-4 justify-center ${start ? "" : "hidden"}`}>
                     <span className={`${slide1 >= 1 ? "" : "hidden"}${start ? "" : "hidden"}`}>
                         <AiTwotonePlusSquare className={`${start ? "" : "hidden"} ${slide1 >= 1 ? "" : "hidden"}text-red-500 text-xl border-solid border-black border-spacing-0 border bg-red-600 z-[2002] opacity-100`} />
                         <span className={`${slide1 >= 1 ? "" : "hidden"}`}>P1</span>
@@ -321,14 +320,26 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                         <span className={`${slide1 >= 4 ? "" : "hidden"}`}>P4</span>
                     </span>
                 </div>
-                <div className={``}>
-                    <div onClick={() => { btnc() }} className={`${!ben ? "hidden" : ""} btndie mt-[100%] py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-green-700 `}>
+                <div className={`${start ? "" : "hidden"}`}>
+                    <div onClick={() => { btnc() }} className={`${!ben ? "hidden" : ""} btncsm btndie mt-[100%] py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-green-700 `}>
                         Cast the Die
                     </div>
-                    <div className={`${!ben ? "" : "hidden"} btndie mt-[100%] py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-red-400 `}>
+                    <div className={`${!ben ? "" : "hidden"} btncsm btndie mt-[100%] py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-red-400 `}>
                         Cast the Die
                     </div>
                 </div>
+            </div>
+            <div className={`${start ? "" : "hidden"}`}>
+                    <div onClick={() => { btnc() }} className={`${!ben ? "hidden" : ""} jjbjhb btndie mt-[100%] py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-green-700 `}>
+                        Cast the Die
+                    </div>
+                    <div className={`${!ben ? "" : "hidden"} jjbjhb btndie mt-[100%] py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-red-400 `}>
+                        Cast the Die
+                    </div>
+                </div>
+            <div className={`${start ? "" : "hidden"} absolute float-left md:w-[130px] w-[280px] lg:w-[160px] xl:w-[200px] mx-auto px-auto flex justify-evenly bottom-0  mt-[100%] mb-[10px] mlogo `}>
+                <a href='https://github.com/Prashant0664/snake-and-ladder' target='_blank'><AiOutlineGithub className={`text-[26px] hover:scale-110 kknkl`} /></a>
+                <a href='https://www.linkedin.com/in/prashant-693591228' target='_blank'><AiFillLinkedin className={`text-[26px] hover:scale-110 kknkl`} /></a>
             </div>
             <Home p1={n1} p2={n2} p3={n3} p4={n4} />
             <Winner opene={result} winn={victor} cresult={cresult} />
