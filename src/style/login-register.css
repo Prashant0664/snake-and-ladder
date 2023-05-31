@@ -1,0 +1,100 @@
+.grid-show {
+    display: grid;
+    grid-template: auto auto auto;
+}
+
+.white {
+    color: white;
+}
+
+.big {
+    font-size: 26px;
+}
+
+.from-input-login-main {
+    background-color: rgb(51, 51, 51);
+    border-radius: 3px;
+    border: solid 1px rgb(133, 133, 133);
+    height: 30px;
+    padding-left: 4px;
+}
+
+.head {
+    font-size: 30px;
+    justify-content: center;
+    text-align: left;
+}
+
+.align-centre {
+    text-align: justify;
+
+}
+
+.centre {
+    text-align: center;
+}
+
+.gridc {
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: red;
+    color: red;
+}
+
+.grid1 {
+    grid-row: 2;
+}
+
+.grid2 {
+    grid-row: 1;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: -5px;
+}
+
+.rform {
+    background-color: aliceblue;
+    padding-left: 3px;
+    font-size: 18px;
+    border-radius: 0.2rem;
+}
+
+.btnr {
+    border-color: red;
+    border: solid 1px rgb(4, 255, 108);
+    transition: 500ms;
+
+}
+
+.btnr:hover {
+    box-shadow: 10px;
+    transform: scale(1.1);
+    transition: 500ms;
+    background-color: rgb(185, 232, 255);
+    border-radius: 10px;
+}
+
+.grid21 {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+@media screen and (min-width: 550px) {
+    .shows {
+        display: none;
+    }
+}
+
+.mobilel {
+    height: 100%;
+}
+
+.footer1 {
+    text-align: center;
+    color: black;
+    opacity: 0.7;
+    margin-bottom: 0px;
+}

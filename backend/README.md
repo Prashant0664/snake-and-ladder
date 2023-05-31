@@ -1,13 +1,48 @@
-UNDER DEVELOPMENT
-<br/>
-<br/>
-<br/>
-<br/>
+# Advanced Register/Login Website
+<br>
+This is a extremely secure registration/login website backend created using MERN with a super cool and responsive frontend. <br>
+<hr>
+
 <br/>
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## `Live Demo`
+
+<hr>
+
+## `Working`
+
+This website receive data [unique email, username, password] from user. Backend then send the user data to the database after encrypting the password along with JWT Token. When the user open the login page, front will ask for user email and password.
+on clicking "Submit" button, backend will take the data and then find and compare the given data with the data present in database. If given credentials do not match then it will throw an appropriate error, if credentials match then login page will take user to the HOME/MAIN PAGE.
+<br>
+<hr> 
+
+## `Special Features🔥`
+
+✨ Fully Responsive Website <br>
+✨ Made using MERN along with frontend <br>
+✨ Highly secure encryption, decryption and transfer of data <br>
+✨ Added more security using <i>helmet</i> <i>cors</i> <i>xss-clean</i> modules <br>
+✨ Perfect Error Handling <br>
+✨ Fully Documented <br>
+<hr>
+
+## `Languages/Tools used`
+
+⚡ HTML
+⚡ ExpressJS
+⚡ NodeJS
+⚡ MongoDB
+⚡ Mongoose
+⚡ CSS
+⚡ Javascript
+⚡ Axios
+<hr> 
+
+## `Need of this website`
+
+Register and login page is one of the world most important part of the websites. This only allows authanticated persons to access the website. A registration page on a website consists of a registration form that lets website users get registered with the website and get access to applicable facilities, services, or products. A registration page is considered to be the most important aspect of a website as it gives you a way to be more interactive with your users. <br>
+<hr>
 
 ## Available Scripts
 
@@ -75,3 +110,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
