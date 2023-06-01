@@ -40,8 +40,8 @@ This is a Snake and Ladder Game website developed using Node.js, React.js, Expre
 
 4. Set up the environment variables:
 
-Create a `.env` file in the root directory.
-Define the required environment variables in the file, such as MongoDB connection details, session secrets, etc.
+   Create a `.env` file in the root directory.
+   Define the required environment variables in the file, such as MongoDB connection details, session secrets, etc.
 
 5. Start the development server:
 
