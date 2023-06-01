@@ -63,6 +63,6 @@ For any inquiries or feedback, please contact:
 Prashant <br/>
 Email: `prashant201103@gmail.com` <br/>
 
-`DEVELOPED AND CREATED BY PRASHANT <a href="https://www.github.com/prashant0664">(https://www.github.com/prashant0664)</a> `
+`DEVELOPED AND CREATED BY PRASHANT [a link](https://www.github.com/prashant0664) `
 
 
