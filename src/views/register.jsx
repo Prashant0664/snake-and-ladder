@@ -25,6 +25,15 @@ const Register = () => {
         localStorage.setItem("Verified", true)
         localStorage.setItem("start", false)
         localStorage.setItem("slide1", 1)
+        
+        localStorage.setItem("fwd1", true);
+        localStorage.setItem("fwd2", true);
+        localStorage.setItem("fwd3", true);
+        localStorage.setItem("fwd4", true);
+        localStorage.setItem("n1", 0);
+                            localStorage.setItem("n2", 0);
+                            localStorage.setItem("n3", 0);
+                            localStorage.setItem("n4", 0);
         window.location.reload();
       }
       else if (msg === "PLEASE VERIFY YOUR EMAIL FIRST") {

@@ -20,8 +20,9 @@ const Play = ({ start, slide1, a, b, c, d }) => {
     var [result, cresult] = React.useState(false);
     var [victor, cvictor] = React.useState(0);
     var [pointer, cpointer] = React.useState(0);
-    var arrchoice = [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6];
-    // var arrchoice = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    // var arrchoice = [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6];
+    // var arrchoice = [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6];
+    var arrchoice = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
     var snakeh = [80, 29, 88, 99];
     var snakee = [45, 6, 36, 34];
     var ladderh = [96, 62, 47];
