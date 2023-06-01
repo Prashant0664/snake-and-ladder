@@ -5,7 +5,7 @@ This is a Snake and Ladder Game website developed using Node.js, React.js, Expre
 ## Features
 
 ✨ User Account Management: Users can create their accounts and log in to access the game. <br/>
-✨ Game Progress: Users can save their game progress and resume it at a later time. <br/>
+✨ Game Progress: Users can save their game and resume it at a later time. <br/>
 ✨ Multiplayer: Up to 4 players can play the game together. <br/>
 ✨ Responsive Design: The website is designed to provide a seamless experience across different devices and screen sizes. <br/>
 ✨ Security: The website ensures secure authentication and data storage using encryption techniques. <br/>
@@ -19,6 +19,7 @@ This is a Snake and Ladder Game website developed using Node.js, React.js, Expre
 ✨ MongoDB: A NoSQL database used for data storage. <br/>
 ✨ HTML/CSS: Markup and styling for the website. <br/>
 ✨ JavaScript: Programming language used for client-side and server-side scripting. <br/>
+✨ TailwindCSS:  CSS framework to provides a comprehensive set of pre-built classes.
 
 ## Installation and Setup
 
