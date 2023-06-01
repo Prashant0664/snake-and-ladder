@@ -126,6 +126,7 @@ const deletegame = async (req, res) => {
         user.save();
         return res.status(200).json({ msg: "Deleted Successfully" });
     } catch (error) {
+    console.log(99999)
         return res.status(401).json({ msg: error })
     }
 }
