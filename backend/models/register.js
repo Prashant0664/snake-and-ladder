@@ -8,9 +8,9 @@ const UserSchema = new mongoose.Schema({
         required: [true, "Please provide name"],
         minlength: 3,
     },
-    verify:{
-        type:Boolean,
-        default:false,
+    verify: {
+        type: Boolean,
+        default: false,
     },
     email: {
         type: String,
@@ -33,9 +33,9 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
-    saved:{
-        type:String,
-        default:"{}"
+    saved: {
+        type: String,
+        default: "[]"
     }
 },
     { timestamps: true })

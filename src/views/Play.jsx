@@ -1,5 +1,5 @@
 import React from 'react'
-import {AiOutlineGithub , AiFillLinkedin , AiTwotonePlusSquare, AiFillGitlab, AiTwotoneDownCircle, AiFillHeart } from "react-icons/ai"
+import { AiOutlineGithub, AiFillLinkedin, AiTwotonePlusSquare, AiFillGitlab, AiTwotoneDownCircle, AiFillHeart } from "react-icons/ai"
 import Home from './home';
 import Winner from './Winner';
 
@@ -58,7 +58,6 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                         }
                         else {
                             cn1(n1 - cnum);
-
                         }
                     }
 
@@ -66,8 +65,11 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                         if (cnum === 1) {
                             cn1(n1 + cnum);
                         }
+                        console.log("--1")
+
                     }
                     else if (n1 + cnum > 100) {
+                        console.log("--2")
 
                     }
                     else if (n1 + cnum === 100 || n1 === 100) {
@@ -75,6 +77,7 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                         localStorage.setItem("fwd1", false);
                         cn1(n1 + cnum);
 
+                        console.log("--3")
 
                     }
                     else {
@@ -85,9 +88,9 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                             }
                         }
                         cn1(n1 + cnum);
+                        console.log("--4")
 
                     }
-                    cnj(0);
                     if (n1 + cnum === laddere[0]) {
                         cn1(ladderh[0]);
                     } if (n1 + cnum === laddere[1]) {
@@ -104,7 +107,7 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                     } if (n1 + cnum === snakeh[2]) {
                         cn1(snakee[2]);
                     } if (n1 + cnum === snakeh[3]) {
-                        cn1(snakeh[3]);
+                        cn1(snakee[3]);
                     }
 
                 }
@@ -162,7 +165,7 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                     } if (n2 + cnum === snakeh[2]) {
                         cn2(snakee[2]);
                     } if (n2 + cnum === snakeh[3]) {
-                        cn2(snakeh[3]);
+                        cn2(snakee[3]);
                     }
                 }
                 else if (pointer === 2) {
@@ -218,7 +221,7 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                     } if (n3 + cnum === snakeh[2]) {
                         cn3(snakee[2]);
                     } if (n3 + cnum === snakeh[3]) {
-                        cn3(snakeh[3]);
+                        cn3(snakee[3]);
                     }
                 }
                 else if (pointer === 3) {
@@ -274,30 +277,33 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                     } if (n4 + cnum === snakeh[2]) {
                         cn4(snakee[2]);
                     } if (n4 + cnum === snakeh[3]) {
-                        cn4(snakeh[3]);
+                        cn4(snakee[3]);
                     }
                 }
                 cben(true);
                 ccnm(cnum);
+
                 localStorage.setItem("n" + `${pointer + 1}`, eval("n" + `${pointer + 1}`) + cnum);
-            }, 3000);
+                console.log(eval("n" + `${pointer + 1}`) + cnum);
+                // localStorage.setItem("n" + `${pointer + 1}`, localStorage.getItem("fwd"+`${pointer+1}`)==="true"?eval("n" + `${pointer + 1}`) + cnum:eval("n" + `${pointer + 1}`) + cnum);
+            }, 2000);
 
             cben(false);
         }, 300);
     }
     return (
         <>
-            <div  style={{display:start?'':'none'}} className={` ${start ? "" : "hidden"} ${start ? "" : "hidden"} castbox lfb11 lfb112 bg-slate-300 text-black top-0 w-[300px] flex ffsmall  flex-col justify-center items-center h-[100%] lll`}>
-                <AiTwotonePlusSquare className={` ${start ? "" : "hidden"} ${dcss ? "dicecss" : "dicecss2"} mt-[0px] text-[200px] hellodice dicecss text-red-400 flex justify-center items-center text-center `} />
-                <div className={` ${start ? "" : "hidden"} mt-[-60%] mb-[10%] text-white z-10 bigd text-[100px]`}>{cnm}</div>
-                <div className={`${start ? "" : "hidden"}  mt-[60px] playeec `}>
-                    <div className={` ${start ? "" : "hidden"} text-xl font-bold `}><h1>
+            <div style={{ display: start ? '' : 'none' }} className={` ${start ? "" : "hidden"} ${start ? "" : "hidden"} ghughggv castbox lfb11 bg-slate-300 text-black top-0 w-[300px] flex ffsmall  flex-col justify-center items-center h-[100%] `}>
+                <AiTwotonePlusSquare className={` ${start ? "" : "hidden"} ${dcss ? "dicecss" : "dicecss2"} small-side2 mt-[0px] text-[200px] hellodice dicecss text-red-400 flex justify-center items-center text-center `} />
+                <div className={` ${start ? "" : "hidden"} mt-[-60%] mb-[10%] text-white z-10 small-side2 bigd text-[100px]`}>{cnm}</div>
+                <div className={`${start ? "" : "hidden"}  small-side2 mt-[60px] playeec `}>
+                    <div className={` ${start ? "" : "hidden"} small-side2 text-xl font-bold `}><h1>
                         Player {ashow[pointer]} Turn
                     </h1>
                     </div>
                 </div>
-                <div className={`flex gap-[10%] playeec2  top-0 mt-4 justify-center ${start ? "" : "hidden"}`}>
-                    <span className={`${slide1 >= 1 ? "" : "hidden"}${start ? "" : "hidden"}`}>
+                <div className={` small-side2 flex gap-[10%] playeec2  top-0 mt-4 justify-center ${start ? "" : "hidden"}`}>
+                    <span className={`${slide1 >= 1 ? "" : "hidden"}${start ? "" : "hidden"} small-side2 `}>
                         <AiTwotonePlusSquare className={`${start ? "" : "hidden"} ${slide1 >= 1 ? "" : "hidden"}text-red-500 text-xl border-solid border-black border-spacing-0 border bg-red-600 z-[2002] opacity-100`} />
                         <span className={`${slide1 >= 1 ? "" : "hidden"}`}>P1</span>
                     </span>
@@ -320,7 +326,7 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                         <span className={`${slide1 >= 4 ? "" : "hidden"}`}>P4</span>
                     </span>
                 </div>
-                <div className={`${start ? "" : "hidden"}`}>
+                <div className={` small-side2 ${start ? "" : "hidden"}`}>
                     <div onClick={() => { btnc() }} className={`${!ben ? "hidden" : ""} btncsm btndie mt-[100%] py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-green-700 `}>
                         Cast the Die
                     </div>
@@ -329,14 +335,53 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                     </div>
                 </div>
             </div>
-            <div className={`${start ? "" : "hidden"}`}>
-                    <div onClick={() => { btnc() }} className={`${!ben ? "hidden" : ""} jjbjhb btndie mt-[100%] py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-green-700 `}>
+
+
+
+            <div style={{ display: start ? '' : 'none' }} className={` ${start ? "" : "hidden"} ${start ? "" : "hidden"} flex flex-row justify-evenly jkkjb castbox lfb11 bg-slate-300 text-black top-0 w-[100%] items-center h-[100%]`}>
+                <div className="">
+                    <AiTwotonePlusSquare className={` ${start ? "" : "hidden"} ${dcss ? "dicecss" : "dicecss2"} h-[100px] w-[100px] `} />
+                    <div className={` ${start ? "" : "hidden"} mt-[-80px] text-[40px] `}>{cnm}</div>
+                </div>
+
+                <div className={`${start ? "" : "hidden"} flex flex-col playeec `}>
+                    <div className={` ${start ? "" : "hidden"} text-xl font-bold `}><h1>
+                        Player {ashow[pointer]} Turn
+                    </h1>
+
+                    </div>
+                    <div className={`flex gap-[10%] playeec2  top-0 mt-4 justify-center ${start ? "" : "hidden"}`}>
+                        <span className={`${slide1 >= 1 ? "" : "hidden"}${start ? "" : "hidden"}`}>
+                            <AiTwotonePlusSquare className={`${start ? "" : "hidden"} ${slide1 >= 1 ? "" : "hidden"}text-red-500 text-xl border-solid border-black border-spacing-0 border bg-red-600 z-[2002] opacity-100`} />
+                            <span className={`${slide1 >= 1 ? "" : "hidden"}`}>P1</span>
+                        </span>
+                        <span className={`${slide1 >= 2 ? "" : "hidden"} ${start ? "" : "hidden"}`}>
+
+                            <AiTwotoneDownCircle className={`${slide1 >= 2 ? "" : "hidden"}text-xl text-blue-500 border-solid border-black border-spacing-0 border rounded-full`} />
+                            <span className={`${slide1 >= 2 ? "" : "hidden"}`}>P2</span>
+                        </span>
+                        <span className={`${slide1 >= 3 ? "" : "hidden"} ${start ? "" : "hidden"}`}>
+
+                            <AiFillHeart className={`${eval(slide1) >= 3 ? "" : "hidden"}text-pink-600 text-xl`} />
+                            <span className={`${slide1 >= 3 ? "" : "hidden"}`}>P3</span>
+                        </span>
+                        <span className={`${slide1 >= 4 ? "" : "hidden"} ${start ? "" : "hidden"}`}>
+
+                            <AiFillGitlab className={`${eval(slide1) >= 4 ? "hidden" : "hidden"}text-purple-700 text-xl`} />
+                            <span className={`${slide1 >= 4 ? "" : "hidden"}`}>P4</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div className={`${start ? "" : "hidden"}`}>
+                    <div onClick={() => { btnc() }} className={`${!ben ? "hidden" : ""} kdfnsv py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-green-700 `}>
                         Cast the Die
                     </div>
-                    <div className={`${!ben ? "" : "hidden"} jjbjhb btndie mt-[100%] py-[15px] rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-red-400 `}>
+                    <div className={`${!ben ? "" : "hidden"} kdfnsv rounded-lg hover:shadow-lg active:scale-105 text-xl hover:scale-110 cursor-pointer text-slate-100 text-bold px-[20px] bg-red-400 `}>
                         Cast the Die
                     </div>
                 </div>
+            </div>
             <div className={`${start ? "" : "hidden"} absolute float-left md:w-[130px] w-[280px] lg:w-[160px] xl:w-[200px] mx-auto px-auto flex justify-evenly bottom-0  mt-[100%] mb-[10px] mlogo `}>
                 <a href='https://github.com/Prashant0664/snake-and-ladder' target='_blank'><AiOutlineGithub className={`text-[26px] hover:scale-110 kknkl`} /></a>
                 <a href='https://www.linkedin.com/in/prashant-693591228' target='_blank'><AiFillLinkedin className={`text-[26px] hover:scale-110 kknkl`} /></a>

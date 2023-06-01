@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AiOutlineMenuFold } from "react-icons/ai"
+import { ImBin } from "react-icons/im"
 import axios from "axios"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -16,6 +17,7 @@ const Rightsidebar = ({ cstart, ca, cb, cc, cd }) => {
         localStorage.clear();
         window.location.reload();
     }
+
     const startagain = () => {
         cstart(false);
         localStorage.setItem("start", false);
@@ -23,10 +25,18 @@ const Rightsidebar = ({ cstart, ca, cb, cc, cd }) => {
         localStorage.setItem("n2", 0);
         localStorage.setItem("n3", 0);
         localStorage.setItem("n4", 0);
+        localStorage.setItem("fwd1", true);
+        localStorage.setItem("fwd2", true);
+        localStorage.setItem("fwd3", true);
+        localStorage.setItem("fwd4", true);
         window.location.reload();
     }
     const savegame = async (e) => {
         e.preventDefault();
+        if (!sna) {
+            toast("Please Provide name of game to be saved");
+            return;
+        }
         try {
             const data = await axios.post("http://localhost:3001/api/v1/savegame/", {
                 n1: localStorage.getItem("n1"),
@@ -59,15 +69,14 @@ const Rightsidebar = ({ cstart, ca, cb, cc, cd }) => {
                 }
                 csg(arr2)
                 carr(arr);
-                console.log(arr);
                 return;
             }).catch((err) => {
                 console.log(err)
-                toast("AN ERROR OCCURRED");
+                // toast("AN ERROR OCCURRED");
             })
         } catch (error) {
             console.log(error)
-            toast("AN ERROR OCCURRED");
+            // toast("AN ERROR OCCURRED");
         }
     }
 
@@ -101,24 +110,51 @@ const Rightsidebar = ({ cstart, ca, cb, cc, cd }) => {
                         </li>
                         <li onClick={() => { csgl(!sgl); load() }} className='w-[100%] bg-blue-300 rounded-md py-1 text-black font-bold'>
                             Load Game
-                            <ul className={`${sgl ? "" : "hidden"} flex flex-col `}>
+                            <ul className={`${sgl ? "" : "hidden"} max-h-[300px] hellodd overflow-scroll flex flex-col `}>
                                 {sg.map((i, j) => {
                                     return (
-                                        <li className='bg-green-300 text-black' onClick={() => {
-                                            localStorage.setItem("n4", eval(arr[j].n4));
-                                            localStorage.setItem("n3", eval(arr[j].n3));
-                                            localStorage.setItem("n2", eval(arr[j].n2));
-                                            localStorage.setItem("n1", eval(arr[j].n1));
-                                            localStorage.setItem("fwd1", eval(arr[j].fwd1));
-                                            localStorage.setItem("fwd2", eval(arr[j].fwd2));
-                                            localStorage.setItem("fwd3", eval(arr[j].fwd3));
-                                            localStorage.setItem("fwd4", eval(arr[j].fwd4));
-                                            localStorage.setItem("start", true);
-                                            localStorage.setItem("slide1", arr[j].slide1);
-                                            window.location.reload();
-                                        }}>
-                                            {i}
-                                        </li>
+                                        <>
+                                            <li className='bg-green-300 text-black' onClick={() => {
+                                                localStorage.setItem("n4", eval(arr[j].n4));
+                                                localStorage.setItem("n3", eval(arr[j].n3));
+                                                localStorage.setItem("n2", eval(arr[j].n2));
+                                                localStorage.setItem("n1", eval(arr[j].n1));
+                                                localStorage.setItem("fwd1", eval(arr[j].fwd1));
+                                                localStorage.setItem("fwd2", eval(arr[j].fwd2));
+                                                localStorage.setItem("fwd3", eval(arr[j].fwd3));
+                                                localStorage.setItem("fwd4", eval(arr[j].fwd4));
+                                                localStorage.setItem("start", true);
+                                                localStorage.setItem("slide1", arr[j].slide1);
+                                                window.location.reload();
+                                            }}>
+                                                <span className='pl-[10px] flex text-center justify-between'>
+                                                    {i}
+                                                    <ImBin className='hover:text-red-500 float-right right-0 text-[20px] color-black hover:opacity-100' onClick={async () => {
+                                                        try {
+                                                            const data = await axios.post("http://localhost:3001/api/v1/savegame/deletegame", {
+                                                                email: localStorage.getItem("email"),
+                                                                index: j
+                                                            }).then((res) => {
+                                                                var str = res.data.msg;
+                                                                var arr = JSON.parse(str);
+                                                                var arr2 = [];
+                                                                for (let i = 0; i < arr.length; i++) {
+                                                                    arr2.push(arr[i].name);
+                                                                }
+                                                                csg(arr2)
+                                                                carr(arr);
+                                                                return;
+                                                            }).catch((err) => {
+                                                                console.log(err)
+                                                            })
+                                                        } catch (error) {
+                                                            console.log(error)
+                                                            // toast("AN ERROR OCCURRED");
+                                                        }
+                                                    }} />
+                                                </span>
+                                            </li>
+                                        </>
                                     )
                                 })}
                             </ul>
