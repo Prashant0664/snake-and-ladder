@@ -81,7 +81,7 @@ const report = async (req, res) => {
         })
         let response = {
             body: {
-                intro: `Click here to verify your mail <br/> <a href="http://localhost:3001/api/v1/verify/report/${str}/${email}">http://localhost:3001/api/v1/verify/report/${str}</a> `,
+                intro: `Click here to verify your mail <br/> <a href="https://foursnakeandladderapi.onrender.com/api/v1/verify/report/${str}/${email}">http://localhost:3001/api/v1/verify/report/${str}</a> `,
                 outro: "Thank You for Using Our Services"
             }
         }
