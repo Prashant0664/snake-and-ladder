@@ -67,7 +67,7 @@ Contributions to the project are welcome! If you find any bugs or want to add ne
 For any inquiries or feedback, please contact:
 
 Prashant <br/>
-Email: `prashant20103@gmail.com`
+Email: `prashant201103@gmail.com`
 
 ## Learn More
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
