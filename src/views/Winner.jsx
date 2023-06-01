@@ -26,9 +26,6 @@ const Winner = ({ opene, winn, cresult }) => {
 
     }, [opene]);
 
-    function openModal() {
-        setIsOpen(true);
-    }
 
     function afterOpenModal() {
         subtitle.style.color = '#f00';
