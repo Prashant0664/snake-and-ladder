@@ -1,4 +1,4 @@
-# `Game Backend`
+# `Snake and Ladder Game Backend`
 
 This is the backend for the snake and ladder game application developed using Node.js, MongoDB, and Express.js. It provides various APIs for user authentication, sending emails, and game-related functionalities.
 
@@ -63,6 +63,6 @@ For any inquiries or feedback, please contact:
 Prashant <br/>
 Email: `prashant201103@gmail.com` <br/>
 
-`DEVELOPED AND CREATED BY PRASHANT [a link](https://www.github.com/prashant0664) `
+DEVELOPED AND CREATED BY PRASHANT [a link](https://www.github.com/prashant0664)
 
 
