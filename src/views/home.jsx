@@ -66,13 +66,13 @@ const Home = ({ p1, p2, p3, p4 }) => {
                         return (
                             <>
                                 <div className='box-text ' style={{ "--i": a1[j], "--j": a2[j], "--k": a3[j] }}>
-                                    <AiTwotonePlusSquare className={`${(arr[j] === p1) ? "transitionp hover:z-[1000] sm:text-[13px] hover:opacity-100 z-[2001]" : "hidden"} ml-[5px] relative top-0 mt-0 pt-0 text-red-500 text-xl border-solid border-black border-spacing-0 border bg-red-600`} />
+                                    <AiTwotonePlusSquare className={`${(arr[j] === p1) ? "transitionp hover:z-[1000] md:text-[13px] hover:opacity-100 z-[2001]" : "hidden"} ml-[5px] relative top-0 mt-0 pt-0 text-red-500 text-xl border-solid border-black border-spacing-0 border bg-red-600`} />
                                     <p className='text-box' >
                                         {arr[j]}
                                     </p>
-                                    <AiTwotoneDownCircle className={`${(arr[j] === (p2)) ? "transitionp " : "hidden"} sm:text-[13px]  relative sm:mt-[-42px] float-right top-0 ${(p1 === p2 || p2 === p4) ? "mt-[-35px]" : "mt-[-25px]"} ${p1 === p2 ? "" : "mt-[-49px]"} relative text-xl text-blue-500 border-solid border-black border-spacing-0 border rounded-full`} />
-                                    <AiFillHeart className={`${(arr[j] === ((p3))) ? "transitionp z-80" : "hidden"}  sm:text-[13px] relative float-left mt-[-33px]   text-pink-600 text-xl`} />
-                                    <AiFillGitlab className={`${(arr[j] === ((p4))) ? " transitionp z-80" : " hidden "} sm:text-[13px] relative ${p4===p2?( p4===p1?"sm:mt-[-30px]": "sm:mt-[-25px]"):""} ${p4===p1?"mt-[-20px]":""} float-right mt-[-23px] text-purple-700 text-xl`} />
+                                    <AiTwotoneDownCircle className={`${(arr[j] === (p2)) ? "transitionp " : "hidden"} md:text-[13px]  relative md:mt-[-42px] float-right top-0 ${(p1 === p2 || p2 === p4) ? "mt-[-35px]" : "mt-[-25px]"} ${p1 === p2 ? "" : "mt-[-49px]"} relative text-xl text-blue-500 border-solid border-black border-spacing-0 border rounded-full`} />
+                                    <AiFillHeart className={`${(arr[j] === ((p3))) ? "transitionp z-80" : "hidden"}  md:text-[13px] relative float-left mt-[-33px]   text-pink-600 text-xl`} />
+                                    <AiFillGitlab className={`${(arr[j] === ((p4))) ? " transitionp z-80" : " hidden "} md:text-[13px] relative ${p4===p2?( p4===p1?"md:mt-[-30px]": "md:mt-[-25px]"):""} ${p4===p1?"mt-[-20px]":""} float-right mt-[-23px] text-purple-700 text-xl`} />
                                 </div>
                             </>
                         )
