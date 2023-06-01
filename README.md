@@ -29,8 +29,8 @@ This is a Snake and Ladder Game website developed using Node.js, React.js, Expre
 
 2. Navigate to the project directory:
 
-
-cd snake-and-ladder-game
+   ```console
+   cd snake-and-ladder-game
 
 
 
