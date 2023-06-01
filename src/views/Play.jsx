@@ -65,11 +65,9 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                         if (cnum === 1) {
                             cn1(n1 + cnum);
                         }
-                        console.log("--1")
 
                     }
                     else if (n1 + cnum > 100) {
-                        console.log("--2")
 
                     }
                     else if (n1 + cnum === 100 || n1 === 100) {
@@ -77,7 +75,6 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                         localStorage.setItem("fwd1", false);
                         cn1(n1 + cnum);
 
-                        console.log("--3")
 
                     }
                     else {
@@ -88,7 +85,6 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                             }
                         }
                         cn1(n1 + cnum);
-                        console.log("--4")
 
                     }
                     if (n1 + cnum === laddere[0]) {
@@ -284,8 +280,6 @@ const Play = ({ start, slide1, a, b, c, d }) => {
                 ccnm(cnum);
 
                 localStorage.setItem("n" + `${pointer + 1}`, eval("n" + `${pointer + 1}`) + cnum);
-                console.log(eval("n" + `${pointer + 1}`) + cnum);
-                // localStorage.setItem("n" + `${pointer + 1}`, localStorage.getItem("fwd"+`${pointer+1}`)==="true"?eval("n" + `${pointer + 1}`) + cnum:eval("n" + `${pointer + 1}`) + cnum);
             }, 2000);
 
             cben(false);
