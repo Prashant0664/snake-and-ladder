@@ -13,7 +13,7 @@ const Header = () => {
       toast("All fields are necessary")
       return;
     }
-    const reply = await axios.post("http://localhost:3001/api/v1/login", {
+    const reply = await axios.post("https://foursnakeandladderapi.onrender.com/api/v1/login", {
       email: lusername,
       password: lpassword
     }).then((res) => {

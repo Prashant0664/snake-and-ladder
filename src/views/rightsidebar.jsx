@@ -38,7 +38,7 @@ const Rightsidebar = ({ cstart, ca, cb, cc, cd }) => {
             return;
         }
         try {
-            const data = await axios.post("http://localhost:3001/api/v1/savegame/", {
+            const data = await axios.post("https://foursnakeandladderapi.onrender.com/api/v1/savegame/", {
                 n1: localStorage.getItem("n1"),
                 n2: localStorage.getItem("n2"),
                 n3: localStorage.getItem("n3"),
@@ -58,7 +58,7 @@ const Rightsidebar = ({ cstart, ca, cb, cc, cd }) => {
     }
     const load = async () => {
         try {
-            const data = await axios.post("http://localhost:3001/api/v1/savegame/loadgame/", {
+            const data = await axios.post("https://foursnakeandladderapi.onrender.com/api/v1/savegame/loadgame/", {
                 email: localStorage.getItem("email")
             }).then((res) => {
                 var str = res.data.msg;
@@ -131,7 +131,7 @@ const Rightsidebar = ({ cstart, ca, cb, cc, cd }) => {
                                                     {i}
                                                     <ImBin className='hover:text-red-500 float-right right-0 text-[20px] color-black hover:opacity-100' onClick={async () => {
                                                         try {
-                                                            const data = await axios.post("http://localhost:3001/api/v1/savegame/deletegame", {
+                                                            const data = await axios.post("https://foursnakeandladderapi.onrender.com/api/v1/savegame/deletegame", {
                                                                 email: localStorage.getItem("email"),
                                                                 index: j
                                                             }).then((res) => {

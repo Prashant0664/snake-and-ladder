@@ -15,7 +15,7 @@ const Register = () => {
       toast("All fields are necessary")
       return;
     }
-    const reply = await axios.post("http://localhost:3001/api/v1/login", {
+    const reply = await axios.post("https://foursnakeandladderapi.onrender.com/api/v1/login", {
       email: rm3,
       password: rpassword3
     }).then((res) => {
@@ -48,7 +48,7 @@ const Register = () => {
       toast("Password do not match");
       return;
     }
-    await axios.post("http://localhost:3001/api/v1/verify/report", {
+    await axios.post("https://foursnakeandladderapi.onrender.com/api/v1/verify/report", {
       email: rm,
       name: rname,
       password: rpassword
