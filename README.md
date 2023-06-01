@@ -4,21 +4,21 @@ This is a Snake and Ladder Game website developed using Node.js, React.js, Expre
 
 ## Features
 
-✨ User Account Management: Users can create their accounts and log in to access the game.
-✨ Game Progress: Users can save their game progress and resume it at a later time.
-✨ Multiplayer: Up to 4 players can play the game together.
-✨ Responsive Design: The website is designed to provide a seamless experience across different devices and screen sizes.
-✨ Security: The website ensures secure authentication and data storage using encryption techniques.
-✨ MongoDB Integration: MongoDB is used to store user account details and game progress.
+✨ User Account Management: Users can create their accounts and log in to access the game. <br/>
+✨ Game Progress: Users can save their game progress and resume it at a later time. <br/>
+✨ Multiplayer: Up to 4 players can play the game together. <br/>
+✨ Responsive Design: The website is designed to provide a seamless experience across different devices and screen sizes. <br/>
+✨ Security: The website ensures secure authentication and data storage using encryption techniques. <br/>
+✨ MongoDB Integration: MongoDB is used to store user account details and game progress. <br/>
 
 ## Technologies Used
 
-✨ Node.js: A JavaScript runtime environment for server-side development.
-✨ React.js: A JavaScript library for building user interfaces.
-✨ Express.js: A minimal and flexible web application framework for Node.js.
-✨ MongoDB: A NoSQL database used for data storage.
-✨ HTML/CSS: Markup and styling for the website.
-✨ JavaScript: Programming language used for client-side and server-side scripting.
+✨ Node.js: A JavaScript runtime environment for server-side development. <br/>
+✨ React.js: A JavaScript library for building user interfaces. <br/>
+✨ Express.js: A minimal and flexible web application framework for Node.js. <br/>
+✨ MongoDB: A NoSQL database used for data storage. <br/>
+✨ HTML/CSS: Markup and styling for the website. <br/>
+✨ JavaScript: Programming language used for client-side and server-side scripting. <br/>
 
 ## Installation and Setup
 
@@ -51,12 +51,12 @@ Define the required environment variables in the file, such as MongoDB connectio
 
 ## Usage
 
-✨ Create a user account by registering on the website.
-✨ Log in to your account.
-✨ Start a new game or load a saved game.
-✨ Play the Snake and Ladder game with up to 4 players.
-✨ Save your game progress to resume it later.
-✨ Log out from the game when you are done
+✨ Create a user account by registering on the website. <br/>
+✨ Log in to your account. <br/>
+✨ Start a new game or load a saved game. <br/>
+✨ Play the Snake and Ladder game with up to 4 players. <br/>
+✨ Save your game progress to resume it later. <br/>
+✨ Log out from the game when you are done <br/>
 
 ## Contributing
 
@@ -65,8 +65,8 @@ Contributions to the project are welcome! If you find any bugs or want to add ne
 ## Contact
 For any inquiries or feedback, please contact:
 
-Prashant
-Email: ### `prashant20103@gmail.com`
+Prashant <br/>
+Email: `prashant20103@gmail.com`
 
 ## Learn More
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
