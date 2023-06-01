@@ -44,7 +44,7 @@ Define the required environment variables in the file, such as MongoDB connectio
     ```bash
     npm start
 
-6. The backend API endpoints will be accessible at `http://localhost:8000`.
+6. The backend API endpoints will be accessible at `http://localhost:3001`.
 
 ## Usage
 ⚡ Use the provided API documentation or explore the codebase to understand the available API endpoints and their functionalities. <br/>
