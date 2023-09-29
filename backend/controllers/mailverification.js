@@ -67,7 +67,7 @@ const report = async (req, res) => {
         let config = {
             service: "gmail",
             auth: {
-                user: "doraemonarea123987@gmail.com",
+                user: process.env.MAIL,
                 pass: process.env.PASS
             }
         }
@@ -87,7 +87,7 @@ const report = async (req, res) => {
         }
         let msil = Mailgen2.generate(response)
         let message = {
-            from: "doraemonarea123987@gmail.com",
+            from: process.env.MAIL,
             to: email,
             subject: "Email verification 4snake and ladders",
             html: msil,
